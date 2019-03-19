@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FirstType should render correctly 1`] = `
+<p>
+  First title
+</p>
+`;
+
+exports[`FirstType should render correctly 2`] = `
+<p>
+  Second title
+</p>
+`;

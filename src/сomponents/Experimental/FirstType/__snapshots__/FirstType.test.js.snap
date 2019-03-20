@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FirstType should render correctly 1`] = `
-<p>
+exports[`FirstType renders component with "First" title 1`] = `
+<p
+  className="mr_first"
+>
   First title
 </p>
 `;
 
-exports[`FirstType should render correctly 2`] = `
-<p>
+exports[`FirstType renders component with "Second" title 1`] = `
+<p
+  className="mr_first"
+>
   Second title
 </p>
 `;

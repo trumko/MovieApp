@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./сomponents/App/App"
+import App from "./App/App"
 
 console.log(`enviroment: ${env}`);
 

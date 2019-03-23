@@ -13,10 +13,12 @@ export default class App extends Component {
     return (
         <Router>
           <Header />
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/test" component={TestPage} />
-          </Switch>
+            <div className="mr_content">
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/test" component={TestPage} />
+              </Switch>
+            </div>
           <Footer />
         </Router>
     );

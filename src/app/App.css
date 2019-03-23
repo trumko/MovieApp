@@ -7,10 +7,16 @@ html, body {
   margin: 0;
 }
 
-body {
-  position: relative;
+.mr_header {
+  overflow: auto;
 }
 
-/* div {
-  overflow: auto;
-} */
+.mr_content {
+  flex: 1;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}

@@ -7,7 +7,7 @@ import TestPage from "./components/TestPage";
 export default class Page extends Component {
   render() {
     return (
-      <div className="mr_content">
+      <div className="mr_content mr_container">
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/test" component={TestPage} />

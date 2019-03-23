@@ -7,9 +7,9 @@ html, body {
   margin: 0;
 }
 
-.mr_header {
+/* .mr_header {
   overflow: auto;
-}
+} */
 
 .mr_content {
   flex: 1;
@@ -19,4 +19,13 @@ html, body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+
+.mr_container {
+  overflow: auto;
+  width: 830px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }

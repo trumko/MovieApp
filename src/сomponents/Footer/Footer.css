@@ -3,6 +3,15 @@
   color: #c13a3a;
   font-family: sans-serif;
   font-weight: bold;
-  height: 80px;
-  padding: 20px;
+}
+
+
+.mr_testContent {
+  float: right;
+  color: #fff;
+}
+
+
+.mr_testContent a {
+  color: #fff;
 }

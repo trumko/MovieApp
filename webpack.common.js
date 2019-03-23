@@ -43,7 +43,11 @@ module.exports = env => {
     },
 
     resolve: {
-      extensions: ['.js']
+      extensions: ['.js'],
+      modules: [
+        'node_modules',
+        path.resolve(__dirname, './src'),
+      ]
     },
 
     watch: false

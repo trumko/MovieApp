@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import './MoviePreview.css';
 import inBrugesPoster from 'assets/in_bruges_poster.jpg';
 
-export default function MoviePreview({ title, date, genre, posterUrl }) {
+export default function MoviePreview({ title, date, genre, posterUrl, id }) {
   return (
-    <Link to="/" className="mr_moviePreview">
+    <Link to={`/movie/${id}`} className="mr_moviePreview">
       <img src={posterUrl} className="mr_moviePoster" />
       <div className="mr_movieInfo">
         <div>

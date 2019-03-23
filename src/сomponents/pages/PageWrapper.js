@@ -2,17 +2,17 @@ import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
 
 import HomePage from "./components/HomePage";
+import MoviePage from "./components/MoviePage";
 import TestPage from "./components/TestPage";
 
-export default class Page extends Component {
+export default class PageWrapper extends Component {
   render() {
     return (
-      <div className="mr_content mr_container">
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/test" component={TestPage} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/movie/1" component={MoviePage} />
+        <Route path="/test" component={TestPage} />
+      </Switch>
     )
   }
 }

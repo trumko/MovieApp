@@ -13,6 +13,8 @@ export default class Footer extends Component {
             <Link to="/">Home page</Link>
             <span> | </span>
             <Link to="/test">Test page</Link>
+            <span> | </span>
+            <Link to="/movie/1">Movie page</Link>
           </span>
         </div>
       </div>

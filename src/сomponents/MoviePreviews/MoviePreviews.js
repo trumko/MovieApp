@@ -16,6 +16,7 @@ export default function MoviePreviews() {
             genre={genre}
             posterUrl={posterUrl}
             key={id}
+            id={id}
           />
         );
       })}

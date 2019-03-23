@@ -8,7 +8,7 @@ import FourthType from "сomponents/Experimental/FourthType";
 export default class TestPage extends Component {
   render() {
     return (
-      <div>
+      <div className="mr_content mr_container">
         <p>Test page</p>
         <FirstType>First type</FirstType>
         <SecondType />

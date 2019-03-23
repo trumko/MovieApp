@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import MoviePreviews from 'сomponents/MoviePreviews/MoviePreviews';
-import Header from 'сomponents/Header/Header'
+import Header from 'сomponents/Header/Header';
 
-export default class HomePage extends Component {
+export default class MoviePage extends Component {
   render() {
     return (
       <>
-        <Header isHome />
+        <Header />
         <div className="mr_content mr_container">
-          <p>Home page</p>
+          <p>Movie page</p>
           <MoviePreviews />
         </div>
       </>

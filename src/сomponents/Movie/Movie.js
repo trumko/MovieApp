@@ -2,7 +2,6 @@ import React from "react";
 
 import './Movie.scss';
 import { movie } from './mocks/movie'
-// import inBrugesPoster from 'assets/in_bruges_poster.jpg';
 
 export default function Movie() {
   console.log('movie', movie);
@@ -15,13 +14,14 @@ export default function Movie() {
         <img src={poster_path} alt={title} />
       </div>
       <div className="mr_movieDetails">
-        <h2>{title}</h2>
-        <p>{vote_average}</p>
-        <p>{tagline}</p>
-        <p>{movieYear}</p>
-        <p>{runtime} min</p>
-        <p>{overview} min</p>
-        <p>{vote_average}</p>
+        <h1>{title}</h1>
+        <span className="mr_voteAvarage">{vote_average}</span>
+        <p className="mr_tagLine">{tagline}</p>
+        <div>
+          <p className="mr_movieYear">{movieYear}</p>
+          <p className="mr_runtime">{runtime} min</p>
+        </div>
+        <p className="mr_overview">{overview}</p>
       </div>
     </div>
   );

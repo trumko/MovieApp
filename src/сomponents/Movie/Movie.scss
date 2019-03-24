@@ -1,16 +1,57 @@
-.mr_poster {
-  display: inline-block;
-  width: 200px;
-  margin-right: 50px;
-}
+.mr_movie {
+  .mr_poster {
+    display: inline-block;
+    width: 200px;
+    margin-right: 50px;
+  }
 
-.mr_poster img {
-  width: 100%;
-}
+  .mr_poster img {
+    width: 100%;
+  }
 
-.mr_movieDetails {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 500px;
-  color: #fff;
+  .mr_movieDetails {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 500px;
+    color: #fff;
+  }
+
+  h1 {
+    color: #f16a6a;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .mr_voteAvarage {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 14px;
+    position: relative;
+    bottom: 3px;
+  }
+
+  .mr_tagLine {
+    margin: 0;
+    color: #ccc;
+  }
+
+  .mr_movieYear,
+  .mr_runtime {
+    display: inline-block;
+    margin-right: 25px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .mr_overview {
+    color: #ccc;
+    line-height: 1.4;
+    font-size: 15px;
+  }
 }

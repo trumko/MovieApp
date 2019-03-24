@@ -1,7 +1,7 @@
-import React, { PureComponent } from "react";
+import React from "react";
 
-export default class ThirdType extends PureComponent {
-  render() {
-    return <p>Class Pure Component</p>;
-  }
+export default function ThirdType() {
+  return (
+    <p>Class Pure Component</p>
+  )
 }

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from "react";
 
 export default class ThirdType extends Component {
@@ -7,7 +8,7 @@ export default class ThirdType extends Component {
   }
 
   changeColor = () => {
-    this.setState((state, props) => {
+    this.setState((state) => {
       return { color: state.color === "red" ? "green" : "red" };
     });
   };

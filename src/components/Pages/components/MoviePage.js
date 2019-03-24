@@ -1,24 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import MoviePreviews from 'components/MoviePreviews/MoviePreviews';
 import Header from 'components/Header/Header';
 
-export default class MoviePage extends Component {
-  componentWillUnmount() {
-    console.log('unmount MoviePage');
-  }
+export default function MoviePage({ match }) {
+  const movieId = match.params.movie_id;
 
-  render() {
-    // console.log(this.props)
-    let movieId = this.props.match.params.movie_id;
-
-    return (
-      <>
-        <Header />
-        <div className="mr_content mr_container">
-          <p>Movie page: {movieId}</p>
-          <MoviePreviews />
-        </div>
-      </>
-    );
-  }
+  return (
+    <>
+      <Header />
+      <div className="mr_content mr_container">
+        <p>Movie page: {movieId}</p>
+        <MoviePreviews />
+      </div>
+    </>
+  );
 }

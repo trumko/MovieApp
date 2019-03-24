@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
 
 import './Movie.scss';
-import { movie } from './mocks/movie'
 
 export class Movie extends Component {
   constructor(props) {
@@ -10,6 +9,20 @@ export class Movie extends Component {
     this.state = {
       data: null
     };
+  }
+
+  componentDidMount() {
+    this.fetchMovie();
+  }
+
+  componentDidUpdate(prevProps) {
+    document.body.scrollTop = 0;
+    const previosMovieId = prevProps.match.params.movie_id;
+    const movieId = this.props.match.params.movie_id;
+
+    if (previosMovieId !== movieId) {
+      this.fetchMovie();
+    }
   }
 
   fetchMovie = () => {
@@ -22,30 +35,16 @@ export class Movie extends Component {
       });
   }
 
-  componentDidMount() {
-    this.fetchMovie();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    document.body.scrollTop = 0;
-    const previosMovieId = prevProps.match.params.movie_id;
-    const movieId = this.props.match.params.movie_id;
-
-    if (previosMovieId !== movieId) {
-      this.fetchMovie();
-    }
-  }
-
   render() {
-    if (!this.state.data) {
+    const { data } = this.state;
+    if (!data) {
       return null;
     }
-    const { title, release_date, genres, poster_path, tagline, runtime, overview, vote_average, id } = this.state.data;
+    const { title, release_date, poster_path, tagline, runtime, overview, vote_average } = data;
     const movieYear = new Date(release_date).getFullYear()
-    const movieGenres = genres.join(', ');
     return (
       <div className="mr_movie">
-        <div  className="mr_poster">
+        <div className="mr_poster">
           <img src={poster_path} alt={title} />
         </div>
         <div className="mr_movieDetails">

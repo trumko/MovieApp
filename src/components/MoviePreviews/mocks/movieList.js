@@ -1,4 +1,4 @@
-export const movieList = {
+export default {
   "data": [
     {
       "id": 337167,

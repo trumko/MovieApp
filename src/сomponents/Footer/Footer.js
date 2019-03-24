@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import Logo from 'сomponents/Logo/Logo';
 
-import './Footer.css'
+import './Footer.scss'
 
 export default class Footer extends Component {
   render() {

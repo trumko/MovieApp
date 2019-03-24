@@ -5,7 +5,7 @@ import HomeHeader from './components/HomeHeader/HomeHeader';
 import MovieHeader from './components/MovieHeader/MovieHeader';
 import Logo from 'сomponents/Logo/Logo';
 
-import './Header.css'
+import './Header.scss'
 
 export default class Header extends Component {
   render() {

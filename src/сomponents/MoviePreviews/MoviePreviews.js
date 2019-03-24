@@ -1,7 +1,7 @@
 import React from 'react';
 import MoviePreview from 'сomponents/MoviePreview/MoviePreview'
 
-import './MoviePreviews.css';
+import './MoviePreviews.scss';
 import { movieList } from './mocks/movieList'
 
 export default function MoviePreviews() {

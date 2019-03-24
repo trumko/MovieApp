@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-import './MoviePreview.css';
+import './MoviePreview.scss';
 import inBrugesPoster from 'assets/in_bruges_poster.jpg';
 
 export default function MoviePreview({ title, date, genres, posterUrl, id }) {

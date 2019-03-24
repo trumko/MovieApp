@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PageWrapper from "сomponents/pages/PageWrapper";
 import Footer from "сomponents/Footer/Footer";
 
-import './App.css'
+import './App.scss'
 
 export default class App extends Component {
   render() {

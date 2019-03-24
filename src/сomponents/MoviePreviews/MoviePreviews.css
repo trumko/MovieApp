@@ -1,4 +1,5 @@
 .mr_moviePreviews {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }

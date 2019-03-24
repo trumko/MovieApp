@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import FirstType from "сomponents/Experimental/FirstType/FirstType";
-import { SecondType } from "сomponents/Experimental/SecondType";
-import ThirdType from "сomponents/Experimental/ThirdType";
-import FourthType from "сomponents/Experimental/FourthType";
+import FirstType from "components/Experimental/FirstType/FirstType";
+import { SecondType } from "components/Experimental/SecondType";
+import ThirdType from "components/Experimental/ThirdType";
+import FourthType from "components/Experimental/FourthType";
 
 export default class TestPage extends Component {
   render() {

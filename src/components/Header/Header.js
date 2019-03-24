@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
 import HomeHeader from './components/HomeHeader/HomeHeader';
-import MovieHeader from './components/MovieHeader/MovieHeader';
-import Logo from 'сomponents/Logo/Logo';
+import Movie from 'components/Movie/Movie';
+import Logo from 'components/Logo/Logo';
 
 import './Header.scss'
 
@@ -14,7 +14,7 @@ export default class Header extends Component {
       <div className="mr_header">
         <div className="mr_container mr_headerContent">
           <Logo />
-          {isHome ? <HomeHeader /> : <MovieHeader />}
+          {isHome ? <HomeHeader /> : <Movie />}
         </div>
       </div>
     )

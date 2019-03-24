@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MoviePreviews from 'сomponents/MoviePreviews/MoviePreviews';
-import Header from 'сomponents/Header/Header'
+import MoviePreviews from 'components/MoviePreviews/MoviePreviews';
+import Header from 'components/Header/Header'
 
 export default class HomePage extends Component {
   render() {

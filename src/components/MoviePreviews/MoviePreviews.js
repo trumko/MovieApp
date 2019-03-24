@@ -1,5 +1,5 @@
 import React from 'react';
-import MoviePreview from 'сomponents/MoviePreview/MoviePreview'
+import MoviePreview from 'components/MoviePreview/MoviePreview'
 
 import './MoviePreviews.scss';
 import { movieList } from './mocks/movieList'

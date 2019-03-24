@@ -18,7 +18,7 @@
 }
 
 .mr_movieInfo {
-  padding: 5px;
+  padding: 5px 0;
 }
 
 .mr_movieTitle {
@@ -36,6 +36,7 @@
   text-align: right;
   font-weight: bold;
   font-size: 12px;
+  vertical-align: top;
 }
 
 .mr_movieDate span {

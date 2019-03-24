@@ -10,7 +10,7 @@ export default class PageWrapper extends Component {
     return (
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/movie/1" component={MoviePage} />
+        <Route path="/movie/:movie_id" component={MoviePage} />
         <Route path="/test" component={TestPage} />
       </Switch>
     )

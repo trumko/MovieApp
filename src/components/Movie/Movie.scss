@@ -1,3 +1,5 @@
+@import "styles/variables.scss";
+
 .mr_movie {
   .mr_poster {
     display: inline-block;
@@ -17,7 +19,7 @@
   }
 
   h1 {
-    color: #f16a6a;
+    color: $pink;
     display: inline-block;
     margin-right: 20px;
     margin-bottom: 0;

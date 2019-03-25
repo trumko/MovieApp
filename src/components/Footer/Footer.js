@@ -13,8 +13,6 @@ export default function Footer() {
             <Link to="/">Home page</Link>
             <span> | </span>
             <Link to="/test">Test page</Link>
-            <span> | </span>
-            <Link to="/movie/1">Movie page</Link>
           </span>
         </div>
       </div>

@@ -17,8 +17,8 @@ export class Movie extends Component {
 
   componentDidUpdate(prevProps) {
     document.body.scrollTop = 0;
-    const previosMovieId = prevProps.match.params.movie_id;
-    const movieId = this.props.match.params.movie_id;
+    const previosMovieId = prevProps.match.params.movieId;
+    const { movieId } = this.props.match.params;
 
     if (previosMovieId !== movieId) {
       this.fetchMovie();
@@ -26,7 +26,7 @@ export class Movie extends Component {
   }
 
   fetchMovie = () => {
-    const movieId = this.props.match.params.movie_id;
+    const { movieId } = this.props.match.params;
     fetch(`https://reactjs-cdp.herokuapp.com/movies/${movieId}`)
       .then(response => response.json())
       .then(data => {

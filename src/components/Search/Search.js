@@ -1,8 +1,8 @@
 import React from "react";
 
-import './HomeHeader.scss';
+import './Search.scss';
 
-export default function HomeHeader() {
+export default function Search() {
   return (
     <div className='mr_search'>
       <h1>Find your movie</h1>

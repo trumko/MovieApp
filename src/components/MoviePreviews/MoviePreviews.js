@@ -7,8 +7,7 @@ import movieList from './mocks/movieList'
 export default function MoviePreviews() {
   return (
     <div className="mr_moviePreviews">
-      {movieList.data.map((movie) => {
-        const { title, release_date, genres, poster_path, id } = movie;
+      {movieList.data.map(({ title, release_date, genres, poster_path, id }) => {
         return (
           <MoviePreview
             title={title}

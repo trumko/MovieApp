@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
+import { connect } from "react-redux";
+import { increaseCount } from './actions'
 
 import './Movie.scss';
 
@@ -35,6 +37,10 @@ export class Movie extends Component {
       });
   }
 
+  testClick = () => {
+    this.props.increaseCount(1);
+  }
+
   render() {
     const { data } = this.state;
     if (!data) {
@@ -44,7 +50,7 @@ export class Movie extends Component {
     const movieYear = new Date(release_date).getFullYear()
     return (
       <div className="mr_movie">
-        <div className="mr_poster">
+        <div onClick={this.testClick} className="mr_poster">
           <img src={poster_path} alt={title} />
         </div>
         <div className="mr_movieDetails">
@@ -62,4 +68,8 @@ export class Movie extends Component {
   }
 }
 
-export default withRouter(Movie)
+const mapDispatchToProps = (dispatch) => ({
+  increaseCount: item => dispatch(increaseCount(item))
+})
+
+export default withRouter(connect(null, mapDispatchToProps)(Movie))

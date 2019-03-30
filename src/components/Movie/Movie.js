@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
 import { connect } from "react-redux";
-import { increaseCount } from './actions'
+
+import { getMovie } from './actions'
 
 import './Movie.scss';
 
 export class Movie extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: null
-    };
-  }
-
   componentDidMount() {
-    this.fetchMovie();
+    const { movieId } = this.props.match.params;
+    this.props.getMovie(movieId)
   }
 
   componentDidUpdate(prevProps) {
@@ -23,34 +18,22 @@ export class Movie extends Component {
     const { movieId } = this.props.match.params;
 
     if (previosMovieId !== movieId) {
-      this.fetchMovie();
+      window.scrollTo(0, 0);
+      this.props.getMovie(movieId);
     }
-  }
-
-  fetchMovie = () => {
-    const { movieId } = this.props.match.params;
-    fetch(`https://reactjs-cdp.herokuapp.com/movies/${movieId}`)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({data: data});
-        window.scrollTo(0, 0);
-      });
-  }
-
-  testClick = () => {
-    this.props.increaseCount(1);
   }
 
   render() {
-    const { data } = this.state;
-    if (!data) {
+    if (!this.props.movie) {
       return null;
     }
-    const { title, release_date, poster_path, tagline, runtime, overview, vote_average } = data;
+
+    const { title, release_date, poster_path, tagline, runtime, overview, vote_average } = this.props.movie;
     const movieYear = new Date(release_date).getFullYear()
+    console.log(this.props.movie)
     return (
       <div className="mr_movie">
-        <div onClick={this.testClick} className="mr_poster">
+        <div className="mr_poster">
           <img src={poster_path} alt={title} />
         </div>
         <div className="mr_movieDetails">
@@ -69,7 +52,11 @@ export class Movie extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  increaseCount: item => dispatch(increaseCount(item))
+  getMovie: movieId => dispatch(getMovie(movieId))
 })
 
-export default withRouter(connect(null, mapDispatchToProps)(Movie))
+const mapStateToProps = (state) => ({
+ movie: state.movieReducer.movie
+})
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Movie))

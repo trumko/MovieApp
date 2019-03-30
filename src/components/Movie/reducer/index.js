@@ -1,17 +1,16 @@
-import { INCREASE_COUNT } from "../actions/types";
+import { SPECIFIC_MOVIE_GET_SUCCESS, SPECIFIC_MOVIE_GET_FAIL } from "../actions/types";
 
 const initialState = {
-  count: 1
+  movie: null,
 };
 
 export default function movieReducer(state = initialState, action) {
-  console.log('action', action);
   switch(action.type) {
-    case INCREASE_COUNT:
-      return { ...state, count: state.count + 1 }
+    case SPECIFIC_MOVIE_GET_SUCCESS:
+      return {...state, movie: action.payload}
 
-    case 'value2':
-      break;
+    case SPECIFIC_MOVIE_GET_FAIL:
+      return {...state, movie: null}
 
     default:
       break;

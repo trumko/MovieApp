@@ -1,6 +1,6 @@
-import { INCREASE_COUNT } from "./types";
+import { SPECIFIC_MOVIE_GET } from "./types";
 
-export function increaseCount(payload) {
-  console.log('payload', payload);
-  return { type: INCREASE_COUNT, payload };
+export function getMovie(payload) {
+  console.log('getMovie payload', payload);
+  return { type: SPECIFIC_MOVIE_GET, payload };
 }

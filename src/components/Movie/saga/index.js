@@ -1,5 +1,5 @@
 import { takeEvery, call, put } from "redux-saga/effects";
-import { fetchMovie } from 'api';
+import { fetchMovie } from 'utils/api';
 import { SPECIFIC_MOVIE_GET, SPECIFIC_MOVIE_GET_SUCCESS, SPECIFIC_MOVIE_GET_FAIL } from "../actions/types";
 
 function* getMovie(action) {

@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import HomePage from "./components/HomePage";
 import MoviePage from "./components/MoviePage";
 
-export default function PageWrapper() {
+export default function Page() {
   return (
     <Switch>
       <Route exact path="/" component={HomePage} />

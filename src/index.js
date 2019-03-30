@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./app/App"
+import AppWrapper from "components/AppWrapper/AppWrapper"
 
 console.log(`enviroment: ${env}`);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<AppWrapper />, document.getElementById('root'));

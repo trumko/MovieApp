@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
 
-import { connect } from "react-redux";
-
 import './Search.scss';
 
 export class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchByType: 'title',
+      type: 'title',
       inputQuery: '',
     };
   }
@@ -19,7 +17,7 @@ export class Search extends Component {
 
   setSearchByType = (type) => {
     this.setState({
-      searchByType: type
+      type: type
     });
   }
 
@@ -32,8 +30,7 @@ export class Search extends Component {
   onFormSubmit = (e) => {
     e.preventDefault();
     if (this.state.inputQuery) {
-      console.log('proceed with search')
-      this.props.history.push('/movie/269149');
+      this.props.history.push(`/search?search=${this.state.inputQuery}&genre=${this.state.type}`);
     }
   }
 
@@ -56,15 +53,15 @@ export class Search extends Component {
             <span>Search by</span>
             <button
               type="button"
-              className={this.state.searchByType === 'title' ? 'mr_isActiveType' : ''}
+              className={this.state.type === 'title' ? 'mr_isActiveType' : ''}
               onClick={() => this.setSearchByType('title')}
             >
               title
             </button>
             <button
               type="button"
-              className={this.state.searchByType === 'genre' ? 'mr_isActiveType' : ''}
-              onClick={() => this.setSearchByType('genre')}
+              className={this.state.type === 'genres' ? 'mr_isActiveType' : ''}
+              onClick={() => this.setSearchByType('genres')}
             >
               genre
             </button>
@@ -75,12 +72,4 @@ export class Search extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  // getMovie: movieId => dispatch(getMovie(movieId))
-})
-
-const mapStateToProps = (state) => ({
- // movie: state.movieReducer.movie
-})
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search))
+export default withRouter(Search)

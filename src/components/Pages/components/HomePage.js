@@ -10,8 +10,7 @@ export default function HomePage() {
         <Search />
       </Header>
       <div className="mr_content mr_container">
-        <p>Home page</p>
-        <MoviePreviews />
+        <h2 className="mr_searchMotto">Find your movie</h2>
       </div>
     </>
   );

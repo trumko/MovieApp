@@ -3,11 +3,8 @@ import { withRouter } from 'react-router-dom'
 import { connect } from "react-redux";
 import queryString from 'query-string';
 
-import MoviePreview from 'components/MoviePreview/MoviePreview'
+import MoviePreviews from 'components/MoviePreviews/MoviePreviews'
 import { getSearchResults } from './actions'
-
-
-import './SearchResults.scss';
 
 export class SearchResults extends Component {
   componentDidMount() {
@@ -23,21 +20,8 @@ export class SearchResults extends Component {
     }
 
     return (
-      <div className="mr_moviePreviews">
-        {searchResults.map(({ title, release_date, genres, poster_path, id }) => {
-          return (
-            <MoviePreview
-              title={title}
-              date={release_date}
-              genres={genres}
-              posterUrl={poster_path}
-              key={id}
-              id={id}
-            />
-          );
-        })}
-      </div>
-    );
+      <MoviePreviews movies={searchResults} />
+    )
   }
 }
 

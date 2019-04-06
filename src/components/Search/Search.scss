@@ -6,7 +6,8 @@
   form {
     position: relative;
     height: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    text-align: center;
   }
 
   button {
@@ -40,9 +41,11 @@
   .mr_searchSubmit {
     position: absolute;
     right: 0;
-    bottom: 0;
     padding: 7px 50px;
     font-size: 12px;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
   hr {
@@ -71,4 +74,25 @@
       }
     }
   }
+}
+
+@media (min-width: $small) {
+  .mr_search {
+    form {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .mr_searchSubmit {
+      bottom: 0;
+      left: auto;
+      transform: none;
+    }
+  }
+}
+
+@media (min-width: $medium) {
+}
+
+@media (min-width: $large) {
 }

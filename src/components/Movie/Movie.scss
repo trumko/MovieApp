@@ -28,7 +28,7 @@
   .mr_voteAvarage {
     width: 32px;
     height: 32px;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     border-radius: 50%;
     display: inline-block;
     text-align: center;
@@ -40,7 +40,7 @@
 
   .mr_tagLine {
     margin: 0;
-    color: #ccc;
+    color: $grey;
   }
 
   .mr_movieYear,
@@ -52,16 +52,8 @@
   }
 
   .mr_overview {
-    color: #ccc;
+    color: $grey;
     line-height: 1.4;
     font-size: 15px;
   }
 }
-
-
-// ToDo: Check if need here
-// .mr_moviePreviews {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-// }

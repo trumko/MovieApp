@@ -12,13 +12,8 @@ export class Search extends Component {
     };
   }
 
-  componentDidMount() {
-  }
-
   setSearchByType = (type) => {
-    this.setState({
-      type: type
-    });
+    this.setState({ type: type });
   }
 
   onInputChange = (e) => {

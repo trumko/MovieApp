@@ -27,16 +27,3 @@ export default function* movieSaga() {
   yield takeEvery(SPECIFIC_MOVIE_GET, getMovie);
   yield takeEvery(SIMILAR_RESULTS_GET, getSimilarResults);
 }
-
-
-// import { takeEvery, call, put } from "redux-saga/effects";
-// import { fetchSimilarResults } from 'utils/api';
-// import {
-//   SIMILAR_RESULTS_GET, SIMILAR_RESULTS_GET_SUCCESS, SIMILAR_RESULTS_GET_FAIL
-// } from "../actions/types";
-
-
-//
-// export default function* similarResultsSaga() {
-//   yield takeEvery(SIMILAR_RESULTS_GET, getSimilarResults);
-// }

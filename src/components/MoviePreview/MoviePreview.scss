@@ -1,53 +1,54 @@
+@import "styles/variables.scss";
+
 .mr_moviePreview {
   width: 200px;
   display: inline-block;
   padding: 10px;
-}
 
-.mr_moviePreview:hover {
-  background: #f3f3f3;;
-}
+  &:hover {
+    background: $greyLight;
+  }
 
-.mr_moviePreview:hover img {
-  filter: brightness(120%);
-}
+  &:hover img {
+    filter: brightness(120%);
+  }
 
+  .mr_moviePoster {
+    width: 100%;
+  }
 
-.mr_moviePoster {
-  width: 100%;
-}
+  .mr_movieInfo {
+    padding: 5px 0;
+  }
 
-.mr_movieInfo {
-  padding: 5px 0;
-}
+  .mr_movieTitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+    width: 80%;
+    display: inline-block;
+  }
 
-.mr_movieTitle {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 12px;
-  margin-bottom: 5px;
-  width: 80%;
-  display: inline-block;
-}
+  .mr_movieDate {
+    width: 20%;
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+    vertical-align: top;
+  }
 
-.mr_movieDate {
-  width: 20%;
-  display: inline-block;
-  text-align: right;
-  font-weight: bold;
-  font-size: 12px;
-  vertical-align: top;
-}
+  .mr_movieDate span {
+    text-align: right;
+    border: 1px solid $greyDark;
+    padding: 0 3px;
+    border-radius: 2px;
+  }
 
-.mr_movieDate span {
-  text-align: right;
-  border: 1px solid #757575;
-  padding: 0 3px;
-  border-radius: 2px;
-}
-
-.mr_movieGenre {
-  color: #757575;
-  font-weight: bold;
-  font-size: 12px;
+  .mr_movieGenre {
+    color: $greyDark;
+    font-weight: bold;
+    font-size: 12px;
+  }
 }

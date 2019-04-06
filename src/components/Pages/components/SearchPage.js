@@ -12,7 +12,6 @@ export default function MoviePage({ match }) {
         <Search />
       </Header>
       <div className="mr_content mr_container">
-        <p>Search page: {movieId}</p>
         <SearchResults />
       </div>
     </>

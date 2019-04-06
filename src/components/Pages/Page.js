@@ -9,8 +9,8 @@ export function Page({ location }) {
   return (
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route path="/movie/:movieId" component={MoviePage} key={location.pathname} />
-      <Route path="/search" component={SearchPage} />
+      <Route path="/movie/:movieId" component={MoviePage} key={location.key} />
+      <Route path="/search" component={SearchPage} key={location.key} />
     </Switch>
   )
 }

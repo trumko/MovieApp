@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+import { getMovieYear } from 'utils/helpers';
+
 import './MoviePreview.scss';
 
 export default function MoviePreview({ title, date, genres, posterUrl, id }) {
-  const movieYear = new Date(date).getFullYear()
+  const movieYear = getMovieYear(date);
   const movieGenres = genres.join(', ');
   return (
     <Link to={`/movie/${id}`} className="mr_moviePreview">

@@ -15,8 +15,8 @@ export class Movie extends Component {
 
   componentDidUpdate() {
     if (this.props.movie) {
-      console.log(2.1, this.props.movie.genres);
-      this.props.getSimilarResults(this.props.movie.genres);
+      const { movie, getSimilarResults } = this.props;
+      getSimilarResults(movie.genres);
     }
   }
 

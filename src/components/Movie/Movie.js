@@ -2,27 +2,21 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
 import { connect } from "react-redux";
 
-import { clearSimilarResults } from 'components/SimilarResults/actions'
 import { getMovieYear } from 'utils/helpers'
-import { getMovie, clearMovie } from './actions'
+import { getMovie, getSimilarResults } from './actions'
 
 import './Movie.scss';
 
 export class Movie extends Component {
   componentDidMount() {
     const { movieId } = this.props.match.params;
-    this.props.clearSimilarResults();
     this.props.getMovie(movieId)
   }
 
-  componentDidUpdate(prevProps) {
-    const previosMovieId = prevProps.match.params.movieId;
-    const currentMovieId = this.props.match.params.movieId;
-
-    if (previosMovieId !== currentMovieId) {
-      window.scrollTo(0, 0);
-      this.props.clearSimilarResults();
-      this.props.getMovie(currentMovieId);
+  componentDidUpdate() {
+    if (this.props.movie) {
+      console.log(2.1, this.props.movie.genres);
+      this.props.getSimilarResults(this.props.movie.genres);
     }
   }
 
@@ -57,8 +51,7 @@ export class Movie extends Component {
 
 const mapDispatchToProps = (dispatch) => ({
   getMovie: movieId => dispatch(getMovie(movieId)),
-  clearMovie: () => dispatch(clearMovie()),
-  clearSimilarResults: () => dispatch(clearSimilarResults())
+  getSimilarResults: (genres) => dispatch(getSimilarResults(genres)),
 })
 
 const mapStateToProps = (state) => ({

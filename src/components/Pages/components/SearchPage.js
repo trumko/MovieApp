@@ -3,9 +3,7 @@ import SearchResults from 'components/SearchResults/SearchResults';
 import Header from 'components/Header/Header';
 import Search from 'components/Search/Search';
 
-export default function MoviePage({ match }) {
-  const { movieId } = match.params;
-
+export default function MoviePage() {
   return (
     <>
       <Header>

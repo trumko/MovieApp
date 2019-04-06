@@ -15,17 +15,6 @@ export class SearchResults extends Component {
     this.props.getSearchResults(params)
   }
 
-  componentDidUpdate(prevProps) {
-    const previosQuery = prevProps.location.search;
-    const currentQuery = this.props.location.search;
-    const params = queryString.parse(currentQuery);
-
-    if (previosQuery !== currentQuery) {
-      window.scrollTo(0, 0);
-      this.props.getSearchResults(params)
-    }
-  }
-
   render() {
     const { searchResults } = this.props;
 

@@ -1,6 +1,6 @@
-import { takeEvery, call, put } from "redux-saga/effects";
-import { fetchSearchResults } from 'utils/api';
-import { SEARCH_RESULTS_GET, SEARCH_RESULTS_GET_SUCCESS, SEARCH_RESULTS_GET_FAIL } from "../actions/types";
+import { takeEvery, call, put } from "redux-saga/effects"
+import { fetchSearchResults } from 'utils/api'
+import { SEARCH_RESULTS_GET, SEARCH_RESULTS_GET_SUCCESS, SEARCH_RESULTS_GET_FAIL } from "../actions/types"
 
 function* getSearchResults(action) {
   try {

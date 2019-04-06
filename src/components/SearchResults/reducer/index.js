@@ -1,4 +1,4 @@
-import { SEARCH_RESULTS_GET_SUCCESS, SEARCH_RESULTS_GET_FAIL } from "../actions/types";
+import { SEARCH_RESULTS_GET_SUCCESS, SEARCH_RESULTS_GET_FAIL } from "../actions/types"
 
 const initialState = {
   searchResults: null,

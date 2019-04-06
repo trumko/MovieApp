@@ -6,7 +6,7 @@ import Movie from 'components/Movie/Movie';
 export default function MoviePage() {
   return (
     <>
-      <Header className="mr_homeHeader">
+      <Header className="mr_movieHeader">
         <Movie />
       </Header>
       <div className="mr_content mr_container">

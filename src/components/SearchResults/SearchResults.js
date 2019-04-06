@@ -5,6 +5,7 @@ import queryString from 'query-string';
 
 import MoviePreviews from 'components/MoviePreviews/MoviePreviews'
 import { getSearchResults } from './actions'
+import { selectSearchResults } from './selectors'
 
 export class SearchResults extends Component {
   componentDidMount() {
@@ -30,7 +31,7 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 const mapStateToProps = (state) => ({
- searchResults: state.searchResultsReducer.searchResults
+  searchResults: selectSearchResults(state)
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchResults))

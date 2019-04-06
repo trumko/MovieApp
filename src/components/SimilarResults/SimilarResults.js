@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { connect } from "react-redux";
 
 import MoviePreviews from 'components/MoviePreviews/MoviePreviews'
+import { selectSimilarResults } from 'components/Movie/selectors'
 
 export function SimilarResults({ similarResults }) {
   if (!similarResults) {
@@ -15,7 +16,7 @@ export function SimilarResults({ similarResults }) {
 }
 
 const mapStateToProps = (state) => ({
-  similarResults: state.movieReducer.similarResults
+  similarResults: selectSimilarResults(state)
 })
 
 export default withRouter(connect(mapStateToProps, {})(SimilarResults))

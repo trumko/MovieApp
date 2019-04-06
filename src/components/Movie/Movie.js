@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import { getMovieYear } from 'utils/helpers'
 import { getMovie, getSimilarResults } from './actions'
+import { selectMovie } from './selectors'
 
 import './Movie.scss';
 
@@ -55,7 +56,7 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 const mapStateToProps = (state) => ({
- movie: state.movieReducer.movie
+  movie: selectMovie(state)
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Movie))

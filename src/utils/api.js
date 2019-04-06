@@ -12,7 +12,7 @@ export const fetchSearchResults = (params) => {
 }
 
 export const fetchSimilarResults = (genres) => {
-  const randomTwoGenres = shuffle(genres).slice(0,2).join(',');
+  const randomTwoGenres = shuffle(genres)[0];
   return fetch(`https://reactjs-cdp.herokuapp.com/movies?searchBy=genres&filter=${randomTwoGenres}`)
      .then(response => response.json())
 }

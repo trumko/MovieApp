@@ -11,7 +11,6 @@ import './Movie.scss';
 export class Movie extends Component {
   componentDidMount() {
     const { movieId } = this.props.match.params;
-    this.props.clearMovie();
     this.props.clearSimilarResults();
     this.props.getMovie(movieId)
   }
@@ -22,7 +21,6 @@ export class Movie extends Component {
 
     if (previosMovieId !== currentMovieId) {
       window.scrollTo(0, 0);
-      this.props.clearMovie();
       this.props.clearSimilarResults();
       this.props.getMovie(currentMovieId);
     }

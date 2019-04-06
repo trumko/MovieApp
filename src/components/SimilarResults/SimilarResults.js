@@ -9,19 +9,19 @@ import './SimilarResults.scss';
 
 export class SimilarResults extends Component {
   componentDidMount() {
+    console.log(1);
     if (this.props.movie && !this.props.similarResults === null) {
       this.props.getSimilarResults(this.props.movie.genres);
     }
   }
 
   componentDidUpdate() {
+    console.log(2);
+
     if (this.props.movie && this.props.similarResults === null) {
+      console.log(2.1);
       this.props.getSimilarResults(this.props.movie.genres);
     }
-  }
-
-  componentWillUnmount() {
-    this.props.clearSimilarResults();
   }
 
   render() {

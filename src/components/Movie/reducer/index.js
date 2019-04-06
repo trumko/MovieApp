@@ -1,5 +1,5 @@
 import {
-  SPECIFIC_MOVIE_GET_SUCCESS, SPECIFIC_MOVIE_GET_FAIL, SPECIFIC_MOVIE_CLEAR,
+  SPECIFIC_MOVIE_GET, SPECIFIC_MOVIE_GET_SUCCESS, SPECIFIC_MOVIE_GET_FAIL,
 } from "../actions/types";
 
 const initialState = {
@@ -11,8 +11,8 @@ export default function movieReducer(state = initialState, action) {
     case SPECIFIC_MOVIE_GET_SUCCESS:
       return {...state, movie: action.payload}
 
+    case SPECIFIC_MOVIE_GET:
     case SPECIFIC_MOVIE_GET_FAIL:
-    case SPECIFIC_MOVIE_CLEAR:
       return {...state, movie: null}
 
     default:

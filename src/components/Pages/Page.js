@@ -1,18 +1,16 @@
 import React from "react";
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import HomePage from "./components/HomePage";
-import MoviePage from "./MoviePage/MoviePage";
+import MoviePage from "./components/MoviePage";
 import SearchPage from "./components/SearchPage";
 
-export function Page({ location }) {
+export default function Page() {
   return (
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route path="/movie/:movieId" component={MoviePage} key={location.pathname} />
+      <Route path="/movie/:movieId" component={MoviePage} />
       <Route path="/search" component={SearchPage} />
     </Switch>
   )
 }
-
-export default withRouter(Page)

@@ -1,4 +1,5 @@
 import React from 'react';
+import MoviePreviews from 'components/MoviePreviews/MoviePreviews';
 import Header from 'components/Header/Header'
 import Search from 'components/Search/Search';
 

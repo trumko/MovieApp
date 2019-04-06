@@ -1,5 +1,5 @@
 import { all, fork } from 'redux-saga/effects'
-import movieSaga from 'components/Pages/MoviePage/saga';
+import movieSaga from 'components/Movie/saga';
 import searchResultsSaga from 'components/SearchResults/saga'
 
 export default function* rootSaga() {

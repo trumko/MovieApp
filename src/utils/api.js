@@ -7,12 +7,12 @@ export const fetchMovie = (movieId) => {
 
 export const fetchSearchResults = (params) => {
   const { search, genre } = params;
-  return fetch(`https://reactjs-cdp.herokuapp.com/movies?search=${search}&searchBy=${genre}`)
+  return fetch(`https://reactjs-cdp.herokuapp.com/movies?search=${search}&searchBy=${genre}&limit=12`)
     .then(response => response.json())
 }
 
-export const fetchSimilarResults = (genres) => {
-  const randomTwoGenres = shuffle(genres)[0];
-  return fetch(`https://reactjs-cdp.herokuapp.com/movies?searchBy=genres&filter=${randomTwoGenres}`)
+export const fetchSimilarResults = (movie) => {
+  const randomGenre = shuffle(movie.genres)[0];
+  return fetch(`https://reactjs-cdp.herokuapp.com/movies?searchBy=genres&filter=${randomGenre}&limit=12`)
      .then(response => response.json())
 }

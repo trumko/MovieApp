@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
+import classnames from 'classnames'
 
 import './Search.scss';
 
@@ -48,14 +49,14 @@ export class Search extends Component {
             <span>Search by</span>
             <button
               type="button"
-              className={this.state.type === 'title' ? 'mr_isActiveType' : ''}
+              className={classnames({'mr_isActiveType': this.state.type === 'title'})}
               onClick={() => this.setSearchByType('title')}
             >
               title
             </button>
             <button
               type="button"
-              className={this.state.type === 'genres' ? 'mr_isActiveType' : ''}
+              className={classnames({'mr_isActiveType': this.state.type === 'genres'})}
               onClick={() => this.setSearchByType('genres')}
             >
               genre

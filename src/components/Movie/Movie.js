@@ -14,8 +14,11 @@ export class Movie extends Component {
     this.props.getMovie(movieId)
   }
 
-  componentDidUpdate() {
-    if (this.props.movie) {
+  componentDidUpdate(prevProps) {
+    const currentMovie = this.props.movie || {};
+    const previosMovie = prevProps.movie || {};
+
+    if (currentMovie.id && (!previosMovie.id || currentMovie.id !== previosMovie.id)) {
       const { movie, getSimilarResults } = this.props;
       getSimilarResults(movie);
     }

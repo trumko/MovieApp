@@ -1,10 +1,13 @@
 @import "styles/variables.scss";
 
 .mr_movie {
+  // text-align: center;
+
   .mr_poster {
-    display: inline-block;
+    // display: inline-block;
     width: 200px;
-    margin-right: 50px;
+    margin: 0 auto;
+    // margin-right: 50px;
   }
 
   .mr_poster img {
@@ -14,8 +17,8 @@
   .mr_movieDetails {
     display: inline-block;
     vertical-align: top;
-    max-width: 500px;
-    color: #fff;
+    text-align: left;
+    color: $white;
   }
 
   h1 {
@@ -28,7 +31,7 @@
   .mr_voteAvarage {
     width: 32px;
     height: 32px;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     border-radius: 50%;
     display: inline-block;
     text-align: center;
@@ -40,7 +43,7 @@
 
   .mr_tagLine {
     margin: 0;
-    color: #ccc;
+    color: $grey;
   }
 
   .mr_movieYear,
@@ -52,8 +55,28 @@
   }
 
   .mr_overview {
-    color: #ccc;
+    color: $grey;
     line-height: 1.4;
     font-size: 15px;
   }
+}
+
+@media (min-width: $small) {
+}
+
+@media (min-width: $medium) {
+  .mr_movie {
+    .mr_poster {
+      display: inline-block;
+      width: 200px;
+      margin-right: 50px;
+    }
+
+    .mr_movieDetails {
+      max-width: 450px;
+    }
+  }
+}
+
+@media (min-width: $large) {
 }

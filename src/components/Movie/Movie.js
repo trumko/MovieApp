@@ -1,47 +1,38 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
+import { connect } from "react-redux";
+
+import { getMovieYear } from 'utils/helpers'
+import { getMovie, getSimilarResults } from './actions'
+import { selectMovie } from './selectors'
 
 import './Movie.scss';
 
 export class Movie extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: null
-    };
-  }
-
   componentDidMount() {
-    this.fetchMovie();
+    const { movieId } = this.props.match.params;
+    this.props.getMovie(movieId)
   }
 
   componentDidUpdate(prevProps) {
-    document.body.scrollTop = 0;
-    const previosMovieId = prevProps.match.params.movieId;
-    const { movieId } = this.props.match.params;
+    const currentMovie = this.props.movie || {};
+    const previosMovie = prevProps.movie || {};
 
-    if (previosMovieId !== movieId) {
-      this.fetchMovie();
+    if (currentMovie.id && (!previosMovie.id || currentMovie.id !== previosMovie.id)) {
+      const { movie, getSimilarResults } = this.props;
+      getSimilarResults(movie);
     }
-  }
-
-  fetchMovie = () => {
-    const { movieId } = this.props.match.params;
-    fetch(`https://reactjs-cdp.herokuapp.com/movies/${movieId}`)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({data: data});
-        window.scrollTo(0, 0);
-      });
   }
 
   render() {
-    const { data } = this.state;
-    if (!data) {
+    const { movie } = this.props;
+
+    if (!movie) {
       return null;
     }
-    const { title, release_date, poster_path, tagline, runtime, overview, vote_average } = data;
-    const movieYear = new Date(release_date).getFullYear()
+
+    const { title, release_date, poster_path, tagline, runtime, overview, vote_average } = movie;
+    const movieYear = getMovieYear(release_date);
     return (
       <div className="mr_movie">
         <div className="mr_poster">
@@ -62,4 +53,13 @@ export class Movie extends Component {
   }
 }
 
-export default withRouter(Movie)
+const mapDispatchToProps = (dispatch) => ({
+  getMovie: movieId => dispatch(getMovie(movieId)),
+  getSimilarResults: (genres) => dispatch(getSimilarResults(genres)),
+})
+
+const mapStateToProps = (state) => ({
+  movie: selectMovie(state)
+})
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Movie))

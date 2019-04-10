@@ -1,16 +1,16 @@
 import React from "react";
-import SimilarResults from 'components/SimilarResults/SimilarResults';
+import SearchResults from 'components/SearchResults/SearchResults';
 import Header from 'components/Header/Header';
-import Movie from 'components/Movie/Movie';
+import Search from 'components/Search/Search';
 
 export default function MoviePage() {
   return (
     <>
-      <Header className="mr_movieHeader">
-        <Movie />
+      <Header>
+        <Search />
       </Header>
       <div className="mr_content mr_container">
-        <SimilarResults />
+        <SearchResults />
       </div>
     </>
   );

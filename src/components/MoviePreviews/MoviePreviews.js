@@ -1,13 +1,17 @@
 import React from 'react';
+
 import MoviePreview from 'components/MoviePreview/MoviePreview'
 
 import './MoviePreviews.scss';
-import movieList from './mocks/movieList'
 
-export default function MoviePreviews() {
+export function MoviePreviews({ movies }) {
+  if (!movies) {
+    return null;
+  }
+
   return (
     <div className="mr_moviePreviews">
-      {movieList.data.map(({ title, release_date, genres, poster_path, id }) => {
+      {movies.map(({ title, release_date, genres, poster_path, id }) => {
         return (
           <MoviePreview
             title={title}
@@ -22,3 +26,5 @@ export default function MoviePreviews() {
     </div>
   );
 }
+
+export default MoviePreviews

@@ -1,13 +1,17 @@
+@import "styles/variables.scss";
+
 .mr_header {
+  h2 {
+    color: $white;
+  }
 
+  .mr_headerContent {
+    background: url('~assets/movie-collage.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    min-height: 170px;
+  }
 }
 
-.mr_headerContent {
-  background: url('~assets/movie-collage.jpg') 50% 50% no-repeat;
-  background-size: cover;
-  min-height: 170px;
-}
-
-h2 {
-  color: #fff;
+.mr_movieHeader .mr_headerContent {
+  min-height: 400px;
 }

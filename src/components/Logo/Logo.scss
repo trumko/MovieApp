@@ -3,15 +3,19 @@
 .mr_logoConteiner {
   display: inline-block;
   margin: 0;
+
+  .mr_logo {
+    color: $pink;
+    font-family: sans-serif;
+    font-weight: bold;
+
+    &:hover {
+      color: $white;
+    }
+  }
 }
 
-.mr_logo {
-  color: $pink;
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.mr_logo:hover {
-  color: #fff;
-
+.mr_header .mr_logo {
+  display: block;
+  margin-bottom: 40px;
 }

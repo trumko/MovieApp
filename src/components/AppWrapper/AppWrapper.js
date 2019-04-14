@@ -18,6 +18,7 @@ export default function AppWrapper() {
           <Page />
           <Footer />
         </Router>
+        <p>This is test line</p>
       </ErrorBoundary>
     </Provider>
   );

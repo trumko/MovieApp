@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo Logo should be rendered correctly 1`] = `
+<div
+  className="mr_logoConteiner"
+>
+  <Link
+    className="mr_logo"
+    to="/"
+  >
+    netflixroulette
+  </Link>
+</div>
+`;

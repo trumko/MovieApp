@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMovieYear should properly extract the year from 2018-03-30 1`] = `2018`;
+
+exports[`getMovieYear should properly extract the year from 2019-01-31 1`] = `2019`;

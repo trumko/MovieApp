@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1555347772145" clover="3.2.0">
-  <project timestamp="1555347772145" name="All files">
+<coverage generated="1555349276574" clover="3.2.0">
+  <project timestamp="1555349276575" name="All files">
     <metrics statements="142" coveredstatements="63" conditionals="35" coveredconditionals="10" methods="63" coveredmethods="15" elements="240" coveredelements="88" complexity="0" loc="142" ncloc="142" packages="25" files="30" classes="30"/>
     <package name="components.AppWrapper">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

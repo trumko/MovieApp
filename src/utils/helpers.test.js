@@ -11,6 +11,6 @@ describe('getMovieYear', () => {
 
 describe('shuffle', () => {
   it('should return the array', () => {
-    expect(typeof shuffle([1, 2, 3])).toBe( 'object' );
+    expect(Array.isArray(shuffle([1, 2, 3]))).toBe(true);
   });
 })

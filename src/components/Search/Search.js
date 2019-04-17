@@ -51,6 +51,7 @@ export class Search extends Component {
               type="button"
               className={classnames({'mr_isActiveType': this.state.type === 'title'})}
               onClick={() => this.setSearchByType('title')}
+              data-search-type="title"
             >
               title
             </button>
@@ -58,6 +59,7 @@ export class Search extends Component {
               type="button"
               className={classnames({'mr_isActiveType': this.state.type === 'genres'})}
               onClick={() => this.setSearchByType('genres')}
+              data-search-type="genres"
             >
               genre
             </button>

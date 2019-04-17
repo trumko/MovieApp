@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search should input field work correctly 1`] = `
+<div
+  className="mr_search"
+>
+  <h1>
+    Find your movie
+  </h1>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="mr_searchInput"
+      name="search-query"
+      onChange={[Function]}
+      placeholder="search..."
+      type="text"
+      value="This is movie title"
+    />
+    <hr />
+    <button
+      className="mr_searchSubmit"
+      name="search"
+      type="submit"
+    >
+      search
+    </button>
+    <div
+      className="mr_searchSwitch"
+    >
+      <span>
+        Search by
+      </span>
+      <button
+        className="mr_isActiveType"
+        data-search-type="title"
+        onClick={[Function]}
+        type="button"
+      >
+        title
+      </button>
+      <button
+        className=""
+        data-search-type="genres"
+        onClick={[Function]}
+        type="button"
+      >
+        genre
+      </button>
+    </div>
+  </form>
+</div>
+`;

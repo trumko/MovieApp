@@ -3,7 +3,7 @@ import {
   SIMILAR_RESULTS_GET, SIMILAR_RESULTS_GET_SUCCESS, SIMILAR_RESULTS_GET_FAIL,
 } from "../actions/types";
 
-const initialState = {
+export const initialState = {
   movie: null,
   similarResults: null,
 };

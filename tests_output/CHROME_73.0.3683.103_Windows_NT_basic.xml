@@ -5,16 +5,16 @@
 
   <testsuite name="basic"
     errors="0" failures="0" hostname="" id="" package="basic" skipped="0"
-    tests="3" time="16.04" timestamp="">
+    tests="3" time="13.54" timestamp="">
   
-    <testcase name="Show motto on home page" classname="basic" time="2.432" assertions="2">
+    <testcase name="Show motto on home page" classname="basic" time="1.713" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="When I do the correct search, it shows movies" classname="basic" time="6.876" assertions="3">
+    <testcase name="When I do the correct search, it shows movies" classname="basic" time="5.871" assertions="3">
 
     
 
@@ -23,7 +23,7 @@
     
     </testcase>
   
-    <testcase name="When I click on movie, it shows the correct one" classname="basic" time="6.733" assertions="3">
+    <testcase name="When I click on movie, it shows the correct one" classname="basic" time="5.956" assertions="3">
 
     
 

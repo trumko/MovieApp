@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header Header with custom clasName should be rendered correctly 1`] = `
+exports[`Header should be rendered correctly with custom clasName 1`] = `
 <div
   className="mr_header testClass"
 >

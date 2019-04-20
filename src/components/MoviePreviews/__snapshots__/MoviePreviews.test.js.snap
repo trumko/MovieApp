@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MoviePreview MoviePreviews with Movies should be rendered correctly 1`] = `
+exports[`MoviePreviews with Movies should be rendered correctly 1`] = `
 <div
   className="mr_moviePreviews"
 >
@@ -35,4 +35,4 @@ exports[`MoviePreview MoviePreviews with Movies should be rendered correctly 1`]
 </div>
 `;
 
-exports[`MoviePreview MoviePreviews without Movies should be rendered correctly 1`] = `""`;
+exports[`MoviePreviews without Movies should be rendered correctly 1`] = `""`;

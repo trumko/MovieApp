@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import ErrorBoundary from './ErrorBoundary'
 
 describe('ErrorBoundary', () => {
-  it('should render the warning if state.hasError is true', () => {
+  it('should render the warning when an error occurs', () => {
     const component = shallow(
       <ErrorBoundary className="testClass">
         <p>Children components</p>
@@ -13,7 +13,7 @@ describe('ErrorBoundary', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should render children if state.hasError is false', () => {
+  it('should render the regular content when there is no error', () => {
     const component = shallow(
       <ErrorBoundary className="testClass">
         <p>Children components</p>

@@ -2,10 +2,10 @@ import { getMovieYear, shuffle } from './helpers';
 
 describe('getMovieYear', () => {
   it('should properly extract the year from 2018-03-30', () => {
-    expect(getMovieYear('2018-03-30')).toMatchSnapshot();
+    expect(getMovieYear('2018-03-30')).toBe(2018);
   });
   it('should properly extract the year from 2019-01-31', () => {
-    expect(getMovieYear('2019-01-31')).toMatchSnapshot();
+    expect(getMovieYear('2019-01-31')).toBe(2019);
   });
 })
 

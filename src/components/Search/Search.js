@@ -26,6 +26,7 @@ export class Search extends Component {
   onFormSubmit = (e) => {
     e.preventDefault();
     if (this.state.inputQuery) {
+      console.log('this.props.history', this.props.history);
       this.props.history.push(`/search?search=${this.state.inputQuery}&genre=${this.state.type}`);
     }
   }
@@ -51,6 +52,7 @@ export class Search extends Component {
               type="button"
               className={classnames({'mr_isActiveType': this.state.type === 'title'})}
               onClick={() => this.setSearchByType('title')}
+              data-search-type="title"
             >
               title
             </button>
@@ -58,6 +60,7 @@ export class Search extends Component {
               type="button"
               className={classnames({'mr_isActiveType': this.state.type === 'genres'})}
               onClick={() => this.setSearchByType('genres')}
+              data-search-type="genres"
             >
               genre
             </button>

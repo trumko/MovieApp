@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimilarResults SimilarResults with Movies should be rendered correctly 1`] = `
+<MoviePreviews
+  movies={
+    Array [
+      Object {
+        "budget": 40000000,
+        "genres": Array [
+          "Comedy",
+          "Crime",
+          "Drama",
+        ],
+        "id": 308266,
+        "overview": "Based on the true story of two young men, David Packouz and Efraim Diveroli, who won a $300 million contract from the Pentagon to arm America's allies in Afghanistan.",
+        "poster_path": "https://image.tmdb.org/t/p/w500/wJXku1YhMKeuzYNEHux7XtaYPsE.jpg",
+        "release_date": "2016-08-17",
+        "revenue": 86234523,
+        "runtime": 114,
+        "tagline": "An American dream",
+        "title": "War Dogs",
+        "vote_average": 6.8,
+        "vote_count": 1773,
+      },
+      Object {
+        "budget": 10000000,
+        "genres": Array [
+          "Crime",
+          "Drama",
+          "Thriller",
+        ],
+        "id": 553,
+        "overview": "A barren soundstage is stylishly utilized to create a minimalist small-town setting in which a mysterious woman named Grace hides from the criminals who pursue her. The town is two-faced and offers to harbor Grace as long as she can make it worth their effort, so Grace works hard under the employ of various townspeople to win their favor. Tensions flare, however, and Grace's status as a helpless outsider provokes vicious contempt and abuse from the citizens of Dogville.",
+        "poster_path": "https://image.tmdb.org/t/p/w500/g1xLrof2RVgtHBB4fLvR5Xr8l5x.jpg",
+        "release_date": "2003-05-19",
+        "revenue": 16680836,
+        "runtime": 178,
+        "tagline": "A quiet little town not far from here.",
+        "title": "Dogville",
+        "vote_average": 7.7,
+        "vote_count": 823,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`SimilarResults SimilarResults without Movies should be rendered correctly 1`] = `""`;

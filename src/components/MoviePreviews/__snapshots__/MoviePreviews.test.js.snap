@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviePreviews with Movies should be rendered correctly 1`] = `
+<div
+  className="mr_moviePreviews"
+>
+  <MoviePreview
+    date="2016-08-17"
+    genres={
+      Array [
+        "Comedy",
+        "Crime",
+        "Drama",
+      ]
+    }
+    id={308266}
+    key="308266"
+    posterUrl="https://image.tmdb.org/t/p/w500/wJXku1YhMKeuzYNEHux7XtaYPsE.jpg"
+    title="War Dogs"
+  />
+  <MoviePreview
+    date="2003-05-19"
+    genres={
+      Array [
+        "Crime",
+        "Drama",
+        "Thriller",
+      ]
+    }
+    id={553}
+    key="553"
+    posterUrl="https://image.tmdb.org/t/p/w500/g1xLrof2RVgtHBB4fLvR5Xr8l5x.jpg"
+    title="Dogville"
+  />
+</div>
+`;
+
+exports[`MoviePreviews without Movies should be rendered correctly 1`] = `""`;

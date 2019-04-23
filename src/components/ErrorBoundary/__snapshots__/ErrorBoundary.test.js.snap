@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary should render the regular content when there is no error 1`] = `
+<p>
+  Children components
+</p>
+`;
+
+exports[`ErrorBoundary should render the warning when an error occurs 1`] = `
+<h1>
+  Something went wrong
+</h1>
+`;

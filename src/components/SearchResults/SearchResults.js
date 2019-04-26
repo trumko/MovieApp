@@ -5,7 +5,7 @@ import queryString from 'query-string';
 
 import MoviePreviews from 'components/MoviePreviews/MoviePreviews'
 import { getSearchResults } from './actions'
-import { selectSearchResults } from './selectors'
+import { selectSearchResults, selectSortbyType } from './selectors'
 
 export class SearchResults extends Component {
   componentDidMount() {
@@ -14,14 +14,14 @@ export class SearchResults extends Component {
   }
 
   render() {
-    const { searchResults } = this.props;
+    const { searchResults, sortbyType } = this.props;
 
     if (!searchResults) {
       return null;
     }
 
     return (
-      <MoviePreviews movies={searchResults} />
+      <MoviePreviews movies={searchResults} sortbyType={sortbyType} />
     )
   }
 }
@@ -31,7 +31,8 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 const mapStateToProps = (state) => ({
-  searchResults: selectSearchResults(state)
+  searchResults: selectSearchResults(state),
+  sortbyType: selectSortbyType(state)
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchResults))

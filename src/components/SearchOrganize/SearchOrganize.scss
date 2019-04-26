@@ -1,0 +1,51 @@
+@import "styles/variables.scss";
+
+.mr_searchOrganizer {
+  text-align: right;
+  background: $greyLight;
+  padding: 10px 0px 15px 0;
+
+  button {
+    color: $white;
+    background: $pink;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $pinkLight;
+    }
+  }
+
+  .mr_sortSwitch {
+    display: inline-block;
+    margin-top: 8px;
+
+    span {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-right: 15px;
+    }
+
+    button {
+      font-size: 12px;
+      margin-right: 15px;
+      padding: 5px 10px;
+
+      &.mr_isActiveType {
+        background: $greyDark;
+      }
+    }
+  }
+}
+
+@media (min-width: $small) {
+}
+
+@media (min-width: $medium) {
+}
+
+@media (min-width: $large) {
+}

@@ -1,7 +1,8 @@
-import { SEARCH_RESULTS_GET_SUCCESS, SEARCH_RESULTS_GET_FAIL } from "../actions/types"
+import { SEARCH_RESULTS_GET_SUCCESS, SEARCH_RESULTS_GET_FAIL, SEARCH_RESULTS_SORT } from "../actions/types"
 
 const initialState = {
   searchResults: null,
+  sortBy: 'release date'
 };
 
 export default function movieReducer(state = initialState, action) {
@@ -11,6 +12,11 @@ export default function movieReducer(state = initialState, action) {
 
     case SEARCH_RESULTS_GET_FAIL:
       return {...state, searchResults: null}
+
+    case SEARCH_RESULTS_SORT:
+
+      console.log('action', action);
+      return {...state, sortBy: action.payload}
 
     default:
       break;

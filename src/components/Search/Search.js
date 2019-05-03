@@ -66,6 +66,7 @@ export class Search extends Component {
             </button>
           </div>
         </form>
+        <div className="mr_subHeader" />
       </div>
     )
   }

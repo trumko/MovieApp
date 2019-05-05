@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import Logo from 'components/Logo/Logo'
 
-import './Header.scss'
+// import './Header.scss'
 
 export default function Header({ className, children }) {
 

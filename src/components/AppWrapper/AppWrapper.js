@@ -1,3 +1,4 @@
+import '../../app-module-path-register'
 import React from "react";
 
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -9,19 +10,26 @@ import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
 import Page from 'components/Pages/Page';
 import Footer from 'components/Footer/Footer';
 
-import './AppWrapper.scss'
+// import './AppWrapper.scss'
 
 export default function AppWrapper() {
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <ErrorBoundary>
-          <Router>
-            <Page />
-            <Footer />
-          </Router>
-        </ErrorBoundary>
-      </PersistGate>
-    </Provider>
+    <h1>AAAAAAAAAAA</h1>
   );
 }
+
+
+// export default function AppWrapper() {
+//   return (
+//     <Provider store={store}>
+//       <PersistGate loading={null} persistor={persistor}>
+//         <ErrorBoundary>
+//           <Router>
+//             <Page />
+//             <Footer />
+//           </Router>
+//         </ErrorBoundary>
+//       </PersistGate>
+//     </Provider>
+//   );
+// }

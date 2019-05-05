@@ -2,9 +2,11 @@
   "name": "movieapp",
   "version": "1.0.0",
   "description": "movie application",
-  "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js --env.development",
+    "dev:build-server": "SET NODE_ENV=development && webpack --config webpack.server.js --mode=development -w",
+    "dev:start": "nodemon ./server-build/index.js",
+    "dev": "npm-run-all --parallel dev:*",
+    "devold": "webpack-dev-server --config webpack.dev.js --env.development",
     "build": "webpack --config webpack.prod.js --env.production",
     "test": "jest --coverage",
     "nightwatch": "nightwatch"
@@ -16,7 +18,9 @@
   "author": "Mykhailo",
   "license": "ISC",
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "classnames": "^2.2.6",
+    "express": "^4.16.4",
     "identity-obj-proxy": "^3.0.0",
     "query-string": "^6.4.2",
     "react": "^16.8.4",
@@ -35,9 +39,12 @@
     "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react-app": "^8.0.0",
     "chromedriver": "^73.0.0",
     "css-loader": "^2.1.1",
     "enzyme": "^3.9.0",
@@ -55,13 +62,16 @@
     "jest": "^24.5.0",
     "nightwatch": "^1.0.19",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.19.0",
+    "npm-run-all": "^4.1.5",
     "react-test-renderer": "^16.8.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.2.1",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "webpack-node-externals": "^1.7.2"
   }
 }

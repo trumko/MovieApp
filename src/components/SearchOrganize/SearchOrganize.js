@@ -4,7 +4,7 @@ import classnames from 'classnames'
 
 import { sortSearchResults } from 'components/SearchResults/actions'
 
-import './SearchOrganize.scss';
+// import './SearchOrganize.scss';
 
 export class SearchOrganize extends Component {
   constructor(props) {

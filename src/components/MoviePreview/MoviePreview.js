@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { getMovieYear } from 'utils/helpers';
 
-import './MoviePreview.scss';
+// import './MoviePreview.scss';
 
 export default function MoviePreview({ title, date, genres, posterUrl, id }) {
   const movieYear = getMovieYear(date);

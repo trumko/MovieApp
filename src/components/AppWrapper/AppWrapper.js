@@ -14,7 +14,7 @@ import Footer from 'components/Footer/Footer';
 
 export default function AppWrapper() {
   return (
-    <h1>AAAAAAAAAAA</h1>
+    <h1>AAAA  ssss  AAAAA  sdfsd  fffffs</h1>
   );
 }
 

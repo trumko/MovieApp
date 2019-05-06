@@ -5,8 +5,8 @@
   "scripts": {
     "dev:build-server": "SET NODE_ENV=development && webpack --config webpack.server.js --mode=development -w",
     "dev:start": "nodemon ./server-build/index.js",
-    "dev": "npm-run-all --parallel dev:*",
-    "devold": "webpack-dev-server --config webpack.dev.js --env.development",
+    "ssr": "npm-run-all --parallel build dev:*",
+    "dev": "webpack-dev-server --config webpack.dev.js --env.development",
     "build": "webpack --config webpack.prod.js --env.production",
     "test": "jest --coverage",
     "nightwatch": "nightwatch"

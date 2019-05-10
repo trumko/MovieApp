@@ -3,7 +3,7 @@ import React from 'react';
 import MoviePreview from 'components/MoviePreview/MoviePreview'
 import { sortByField } from 'utils/helpers'
 
-// import './MoviePreviews.scss';
+import './MoviePreviews.scss';
 
 export function MoviePreviews({ movies, sortbyType }) {
   if (!movies) {

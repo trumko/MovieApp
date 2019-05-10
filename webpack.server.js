@@ -20,8 +20,35 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+        loader: 'url-loader?limit=100000',
+      },
+      {
         test: /\.js$/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'isomorphic-style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[name]__[local]___[hash:base64:5]',
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [path.resolve(__dirname, './src')]
+            }
+          }
+        ]
       }
     ]
   }

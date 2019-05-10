@@ -5,7 +5,9 @@ import express from 'express'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 
-import AppWrapper from '../src/components/AppWrapper/AppWrapper';
+import { StaticRouter } from 'react-router-dom';
+
+import { AppWrapperInner } from '../src/components/AppWrapper/AppWrapper';
 
 const PORT = 8080
 const app = express()
@@ -18,10 +20,15 @@ const serverRenderer = (req, res, next) => {
       console.error(err)
       return res.status(500).send('An error occurred')
     }
+    const context = {};
     return res.send(
       data.replace(
         '<div id="root"></div>',
-        `<div id="root">${ReactDOMServer.renderToString(<AppWrapper />)}</div>`
+        `<div id="root">${ReactDOMServer.renderToString(
+          <StaticRouter location={req.url} context={context}>
+            <AppWrapperInner />
+          </StaticRouter>
+        )}</div>`
       )
     )
   })
@@ -29,7 +36,7 @@ const serverRenderer = (req, res, next) => {
 router.use('^/$', serverRenderer)
 
 router.use(
-  express.static(('./build'), { maxAge: '30d' })
+  express.static(('./server-build'), { maxAge: '30d' })
 )
 
 // tell the app to use the above rules

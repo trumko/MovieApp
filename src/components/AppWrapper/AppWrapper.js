@@ -10,26 +10,33 @@ import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary'
 import Page from 'components/Pages/Page';
 import Footer from 'components/Footer/Footer';
 
-// import './AppWrapper.scss'
+import './AppWrapper.scss'
+
+// export default function AppWrapper() {
+//
+//   return (
+//     <h1>Tets rendering</h1>
+//   );
+// }
+
 
 export default function AppWrapper() {
   return (
-    <h1>AAAA  ssss  AAAAA  sdfsd  fffffs</h1>
+    <Provider store={store}>
+      <ErrorBoundary>
+        <Router>
+          <AppWrapperInner />
+        </Router>
+      </ErrorBoundary>
+    </Provider>
   );
 }
 
-
-// export default function AppWrapper() {
-//   return (
-//     <Provider store={store}>
-//       <PersistGate loading={null} persistor={persistor}>
-//         <ErrorBoundary>
-//           <Router>
-//             <Page />
-//             <Footer />
-//           </Router>
-//         </ErrorBoundary>
-//       </PersistGate>
-//     </Provider>
-//   );
-// }
+export function AppWrapperInner() {
+  return (
+    <>
+      <Page />
+      <Footer />
+    </>
+  );
+}

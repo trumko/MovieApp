@@ -6,7 +6,7 @@ import { getMovieYear } from 'utils/helpers'
 import { getMovie, getSimilarResults } from './actions'
 import { selectMovie } from './selectors'
 
-// import './Movie.scss';
+import './Movie.scss';
 
 export class Movie extends Component {
   componentDidMount() {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
 import classnames from 'classnames'
 
-// import './Search.scss';
+import './Search.scss';
 
 export class Search extends Component {
   constructor(props) {
